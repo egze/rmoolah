@@ -1,5 +1,7 @@
 # Rmoolah
 
+[![Build Status](https://travis-ci.org/egze/rmoolah.svg?branch=master)](https://travis-ci.org/egze/rmoolah)
+
 With moolah.io you can process payments in-store and online. Rmoolah is a API wrapper for moolah.io
 
 ## Installation
