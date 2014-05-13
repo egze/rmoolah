@@ -42,6 +42,8 @@ transaction.status
 => "pending"
 ```
 
+Look at tests for further examples.
+
 ## Contributing
 
 1. Fork it ( https://github.com/egze/rmoolah/fork )
