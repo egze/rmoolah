@@ -1,6 +1,6 @@
 # Rmoolah
 
-TODO: Write a gem description
+With moolah.io you can process payments in-store and online. Rmoolah is a API wrapper for moolah.io
 
 ## Installation
 
