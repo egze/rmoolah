@@ -4,6 +4,9 @@
 
 With moolah.io you can process payments in-store and online. Rmoolah is a API wrapper for moolah.io
 
+Developed by [@egze] for [9flats.com]
+
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -53,3 +56,8 @@ Look at tests for further examples.
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
+
+
+
+[@egze]:http://www.github.com/egze/
+[9flats.com]:http://www.9flats.com/
