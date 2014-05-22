@@ -4,8 +4,6 @@ module Rmoolah
     
     include HTTParty
     
-    debug_output $stderr
-    
     base_uri 'https://moolah.io'
     
     class << self
