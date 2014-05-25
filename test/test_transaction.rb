@@ -13,7 +13,7 @@ class TestTransaction < MiniTest::Unit::TestCase
   end
   
   def test_should_fetch_transaction
-    stub_request(:get, /.*moolah.*/).to_return(:body => File.new('test/fixtures/fetch_success.json'), :status => 200)
+    stub_request(:get, /.*moolah.*/).to_return(:body => File.new('/fixtures/fetch_success.json'), :status => 200)
     tr = Rmoolah::Transaction.fetch("322fabc5-1111-1111-1111-688eb8271204")
     assert_equal "DMU2tcx9Fe8nsDXEUA2SkBynJt1KXXXXXX", tr.address
     assert_equal 0, tr.received
