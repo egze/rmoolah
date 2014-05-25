@@ -55,13 +55,13 @@ module Rmoolah
     private
     def update!(json)
       h = JSON.parse(json)
-      @status           ||= h['status']
-      @tx               ||= h['tx']
-      @url              ||= h['url']
-      @address          ||= h['address']
-      @amount_to_pay    ||= h['amount']
-      @currency_to_pay  ||= h['currency']
-      @received         ||= h['received']
+      @status           = h['status']
+      @tx               = h['tx']
+      @url              = h['url']
+      @address          = h['address']
+      @amount_to_pay    = h['amount']
+      @currency_to_pay  = h['currency']
+      @received         = h['received']
       self
     end
     
