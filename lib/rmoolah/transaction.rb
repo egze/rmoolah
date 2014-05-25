@@ -27,12 +27,12 @@ module Rmoolah
                 :received
     
     def initialize(guid, amount_requested, currency_requested, product, return_url, ipn = nil)
-      @guid = guid
-      @amount_requested = amount_requested
+      @guid               = guid
+      @amount_requested   = amount_requested
       @currency_requested = currency_requested
-      @product = product
-      @return_url = return_url
-      @ipn = ipn
+      @product            = product
+      @return_url         = return_url
+      @ipn                = ipn
     end
     
     def create
