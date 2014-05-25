@@ -1,3 +1,4 @@
+require 'debugger'
 module Rmoolah
   
   class Transaction
@@ -5,6 +6,9 @@ module Rmoolah
     include HTTParty
     
     base_uri 'https://moolah.io'
+
+    PAY_PATH   = "/api/pay"
+    CHECK_PATH = "/api/pay/check/"
     
     class << self
       def fetch(tx)
@@ -36,19 +40,14 @@ module Rmoolah
     end
     
     def create
-      response = self.class.get("/api/pay", query: {
-        guid: guid,
-        amount: amount_requested,
-        currency: currency_requested,
-        product: product,
-        return: return_url
-      })
+      query    = { guid: guid, amount: amount_requested, currency: currency_requested, product: product, return: return_url}
+      response = self.class.get(PAY_PATH, query: query)
       update!(response.body)
       self
     end
 
-    def fetch(tx = @tx)
-      response = self.class.get("/api/pay/check/#{tx}")
+    def fetch(tx)
+      response = self.class.get(CHECK_PATH + tx)
       update!(response.body)
       self
     end
