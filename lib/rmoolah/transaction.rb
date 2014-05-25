@@ -38,9 +38,8 @@ module Rmoolah
       @return_url         = return_url
       @ipn                = ipn
     end
-    
+
     def create
-      query    = { guid: guid, amount: amount_requested, currency: currency_requested, product: product, return: return_url}
       response = self.class.get(PAY_PATH, query: query)
       update!(response.body)
       self
@@ -53,6 +52,11 @@ module Rmoolah
     end
     
     private
+
+    def query
+      { guid: guid, amount: amount_requested, currency: currency_requested, product: product, return: return_url}
+    end
+
     def update!(json)
       h = JSON.parse(json)
       @status           = h['status']
